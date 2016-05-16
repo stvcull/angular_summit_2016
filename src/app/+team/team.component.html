@@ -1,0 +1,11 @@
+<div>
+    These are the players that make up the {{team.name}}!
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon">Team Name:</div>
+            <input type="text" class="form-control" [(ngModel)]="team.name">
+        </div>
+    </div>
+    <app-card [player]="player" *ngFor="let player of team.players" (edit)="onEdit($event)">
+    </app-card>
+</div>
